@@ -10,7 +10,7 @@
 makeCacheMatrix <- function(x = matrix()) {
   rev<- NULL
   
-  # check that matrix 'square', ssince only square matrices are invertible
+  # only square matrix are invertible
  +    dims <- dim(x)
  +    if (dims[1] != dims[2])
  +    {
