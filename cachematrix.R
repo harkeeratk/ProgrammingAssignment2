@@ -2,9 +2,20 @@
 ## functions do
 
 ##  creates a special "matrix" object and caches its inverse
-
+## it has four functions
+#1) set- assign values to the matrix
+#2) get- displayes values of the matrix
+#3) setinverse - sets the inverse
+#4) getinverse- outputs the inverse
 makeCacheMatrix <- function(x = matrix()) {
   rev<- NULL
+  
+  # check that matrix 'square', ssince only square matrices are invertible
+ +    dims <- dim(x)
+ +    if (dims[1] != dims[2])
+ +    {
+ +        message("Matrix should be square")
+ +    }
   set <- function(y) {
     x <<- y
     rev <<- NULL
